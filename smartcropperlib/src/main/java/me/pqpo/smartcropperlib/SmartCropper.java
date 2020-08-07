@@ -50,7 +50,7 @@ public class SmartCropper {
         int cropHeight = (int) ((CropUtils.getPointsDistance(leftTop, leftBottom)
                 + CropUtils.getPointsDistance(rightTop, rightBottom))/2);
 
-        Bitmap cropBitmap = Bitmap.createBitmap(cropWidth, cropHeight, Bitmap.Config.ARGB_8888);
+        Bitmap cropBitmap = Bitmap.createBitmap(cropWidth, cropHeight, Bitmap.Config.RGB_565);
         SmartCropper.nativeCrop(srcBmp, cropPoints, cropBitmap);
         return cropBitmap;
     }
